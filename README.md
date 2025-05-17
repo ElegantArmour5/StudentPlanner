@@ -1,16 +1,20 @@
 # 📘 Student Planner App
 
-An intuitive, lightweight web app to help students organize tasks, manage deadlines, and stay productive — built with **Streamlit**.
+A secure, smart, and user-specific task planner designed for students to organize assignments, manage deadlines, and boost productivity — all through a clean and interactive **Streamlit** interface.
 
 ---
 
 ## ✨ Features
 
-- ✅ Add tasks with title, subject, and due date
-- 📅 View upcoming tasks in an interactive table
-- 🗑️ Clear all tasks with one click
-- 💾 Tasks persist locally using CSV (simple and fast)
-- 🌐 Hosted on [Streamlit Cloud](https://studentplanner.streamlit.app/)
+- 🔐 **User Registration & Login** — accounts secured with SHA-256 hashed passwords
+- 🧑‍💻 **User-Specific Task Lists** — each student sees only their tasks
+- ✅ **Add Tasks** with title, subject, due date, and optional notes
+- 📂 **Sort Tasks** by title or deadline
+- 📄 **Expandable Task View** — click to reveal task details
+- 🗑️ **Clear All Tasks** with one click
+- 🔄 **Auto Refresh** after adding or clearing tasks
+- 💾 **Persistent Storage** using CSV files (`tasks_<username>.csv`)
+- 🌐 **Hosted on Streamlit Cloud** for easy access anywhere
 
 ---
 
@@ -25,15 +29,24 @@ An intuitive, lightweight web app to help students organize tasks, manage deadli
 - [Python](https://www.python.org/)
 - [Streamlit](https://streamlit.io/)
 - [Pandas](https://pandas.pydata.org/)
+- [Hashlib](https://docs.python.org/3/library/hashlib.html) for password hashing
+- [JSON](https://www.json.org/) for user database
 
 ---
 
-## 🧪 Setup Locally
+## 🧪 Run Locally
 
 ```bash
+# Clone the repo
 git clone https://github.com/ElegantArmour5/StudentPlanner.git
 cd StudentPlanner
+
+# Create and activate virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate      # Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run the app
 streamlit run planner_app.py
